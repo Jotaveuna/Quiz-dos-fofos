@@ -1,0 +1,53 @@
+body{
+    background-color: pink;
+    font-family: Arial, sans-serif;
+    color: #2d1b2e;
+}
+
+header {
+    text-align: center;
+    padding: 45px;
+    background-color: #ff6eb4;
+    color: white;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+.pagina {
+    display: none;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 2cap;
+}
+.img_fofo {
+    width: 250px; 
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px; 
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.pagina.ativa {
+    display: block;
+}
+
+button {
+    background-color: #ff6eb4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 10cap;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 24px;
+}
+
+button:hover {
+    background-color: #e0457e;
+}

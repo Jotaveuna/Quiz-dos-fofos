@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Quiz para FOFOS</title>
+        <meta name="description" content="Um quiz interativo para testar seu conhecimento da mitologia dos Fofos">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1>QUIZ DOS FOFOS</h1>
+            <p>Teste seus conhecimentos de Fofos e veja qual seu nivel de Fofura!</p>
+        </header>
+        <main>
+            <!--INTRODUÇAO-->
+            <section class="pagina ativa" id="introducao">
+                <h2>Sobre esse quiz</h2>
+                <p>Esse quiz foi   desenvolvido para testar seus conhecimentos Fofusticos, como personagens, relacionamentos, histórias de amor e muito mais.</p>
+                <p>Voce encontrará diferentes tipos de perguntas, incluindo multiplas escolhas e texto. Desafie-se com esse quiz!</p>
+                <button onclick="irPara('pergunta1')">Começar Quiz</button>
+            </section>
+            <!--PERGUNTA 1: multipla escolha-->
+            <section class="pagina" id="pergunta1">
+                <h2>Pergunta 1: Quais são os reais namorados de Pedro Leonel?</h2>
+                <form>
+                    <input type="radio" value="Bernardo e Anderson" id="p1a"name="pergunta1">
+                    <label for="p1a">Bernardo e Anderson</label><br>
+                    <input type="radio" value="Anderson e André" id="p1b"name="pergunta1">
+                    <label for="p1b">Anderson e André</label><br>
+                    <input type="radio" value="André e Bernardo" id="p1c"name="pergunta1">
+                    <label for="p1c">André e Bernardo</label><br>
+                    <input type="radio" value="Todos estão corretos" id="p1d"name="pergunta1">
+                    <label for="p1d">Todos estão corretos</label>
+                </form>
+                <button onclick="confirmar('pergunta1','Anderson e André', 'resultado1')">Confirmar</button>
+                <p id="resultado1"></p>
+                <button onclick="irPara('introducao')">Voltar</button>
+                <button onclick="irPara('pergunta2')">Próximo ></button>
+                
+            </section>
+            <!--PERGUNTA 2:-->
+            <section class="pagina" id="pergunta2">
+                <h2>Pergunta 2: Qual foi a pergunta que Rafael fez para Rodrigo?</h2>
+                <form>
+                    <input type="radio" value="Rodrigo, qual é sua idade?" id="p2a"name="pergunta2">
+                    <label for="p2a">Rodrigo, qual é sua idade</label><br>
+                    <input type="radio" value="ué, gaguejou pela mensagem?" id="p2b"name="pergunta2">
+                    <label for="p2b">ué, gaguejou pela mensagem?</label><br>
+                    <input type="radio" value="Rodrigo, qual é sua sexualidade?" id="p2c"name="pergunta2">
+                    <label for="p2c">Rodrigo, qual é sua sexualidade?</label><br>
+                    <input type="radio" value="Rodrigo, o Bernardo gosta de mim de verdade?" id="p2d"name="pergunta2">
+                    <label for="p2d">Rodrigo, o Bernardo gosta de mim de verdade?</label><br>
+                </form>
+                <button onclick="confirmar('pergunta2','Rodrigo, qual é sua sexualidade?', 'resultado2')">Confirmar</button>
+                <p id="resultado2"></p>
+                <button onclick="irPara('pergunta1')">Voltar</button>
+                <button onclick="irPara('pergunta3')">Próximo ></button>
+            
+            </section>
+            <!--Pergunta 3:-->
+            <section class="pagina" id="pergunta3">
+                <h2>Pergunta 3: Quem é o monstro da foto que tem essas pernas peludas e usa sunguinha vermelha?</h2>
+                <img src="./assets/IMG_E9203.JPG" alt="Pernas" class="img_fofo">
+                <form>
+                    <input type="text" id="p3" name="pergunta3"
+                    placeholder="Digite sua resposta...">
+                </form>
+                <button onclick="confirmarTexto('p3', 'Pedro Leonel', 'resultado3')">Confirmar</button>
+                <p id="resultado3"></p>
+                <button onclick="irPara('pergunta2')">Voltar</button>
+                <button onclick="irPara('pergunta4')">Próximo ></button>
+            </section>
+            <!--PERGUNTA 4-->
+            <section class="pagina" id="pergunta4">
+                <h2>Pergunta 4: Quais vilões da mitologia amam o Fofo Guilherme? </h2>
+                <form>
+                    <input type="checkbox" value="Pedro leonel" id="p4a" name="pergunta4">
+                    <label for="p4a">Pedro Leonel</label><br>
+                    <input type="checkbox" value="Ester Moretti" id="p4b" name="pergunta4">
+                    <label for="p4b">Ester Moretti</label><br>
+                    <input type="checkbox" value="Juuh" id="p4c" name="pergunta4">
+                    <label for="p4c">Juuh</label><br>
+                    <input type="checkbox" value="Boss" id="p4d" name="pergunta4">
+                    <label for="p4d">Boss</label><br>
+                </form>
+                <img src="./assets/IMG_E9210.JPG" alt="gui" class="img_fofo">
+               <button onclick="confirmarCheckbox('pergunta4', ['Ester Moretti', 'Boss'], 'resultado4')">Confirmar</button>
+                <p id="resultado4"></p>
+                <button onclick="irPara('pergunta3')">Voltar</button>
+                <button onclick="irPara('pergunta5')">Próximo</button>
+            </section>
+            <!--PERGUNTA 5-->
+            <section class="pagina" id="pergunta5">
+                <h2>Pergunta 5: Complete a musica com as palavras que estão faltando.</h2>
+                <h3>"Vai ter que supera-a-a-a, vai ter que supera-a-a-a, essa..."</h3>
+                <form>
+                    <input type="text" id="p5" name="pergunta5"
+                    placeholder="Digite sua resposta...">
+                </form>
+                <img src="./assets/IMG_E6938.JPG" alt="Menina solta" class="img_fofo">
+                 <button onclick="confirmarTexto('p5', 'Menina solta', 'resultado5')">Confirmar</button>
+                <p id="resultado5"></p>
+                <button onclick="irPara('pergunta4')">Voltar</button>
+                <h1>Mais perguntas fofas em breve...</h1>
+            </section>
+            <!--Pergunta 6-->
+            <section class="pagina" id="pergunta6">
+                <h2>Pergunta 6:</h2>
+                
+            </section>
+            
+        </main>
+        <footer>
+            <p>&copy Quiz de Fofos. Desenvolvido por JOTAVE. Me siga no <a href="https://www.instagram.com/jv1ctor.f/" target="_blank">Instagram </a>para ser um Fofo</p>
+            
+        </footer>
+        <script>
+            function irPara(idDestino){
+                document.querySelector('.pagina.ativa').classList.remove('ativa');
+                document.getElementById(idDestino) .classList.add("ativa");
+            }
+            function confirmar(nomePergunta, respostaCorreta, idResultado){
+                const selecionado = document.querySelector('input[name="'+ nomePergunta +'"]:checked');
+                const resultado = document.getElementById(idResultado);
+
+                if(selecionado === null){
+                    resultado.textContent = "⚠️ Selecione uma resposta!";
+                    resultado.style.color = "orange";
+                    return;
+                }
+
+                if(selecionado.value === respostaCorreta) {
+                    resultado.textContent = "✅ Correto!";
+                    resultado.style.color = "green";
+                } else{
+                    resultado.textContent = "❌ Errado! A resposta correta é: " + respostaCorreta;
+                    resultado.style.color = "red";
+                }
+            }
+            function confirmarTexto(idInput, respostaCorreta, idResultado) {
+                const input = document.getElementById(idInput);
+                const resultado = document.getElementById(idResultado);
+                const respostaUsuario = input.value.trim().toLowerCase();
+                const respostaCertaLimpa = respostaCorreta.toLowerCase();
+
+                if (respostaUsuario === "") {
+                    resultado.textContent = "⚠️ Digite algo antes de confirmar!";
+                    resultado.style.color = "orange";
+                    return;
+                }
+
+                if (respostaUsuario === respostaCertaLimpa) {
+                    resultado.textContent = "✅ Acertou! É o " + respostaCorreta + "!";
+                    resultado.style.color = "green";
+                } else {
+                    resultado.textContent = "❌ Errou! A resposta era: " + respostaCorreta;
+                    resultado.style.color = "red";
+                }
+}
+            function confirmarCheckbox(nomePergunta, respostasCorretas, idResultado) {
+                const selecionados = document.querySelectorAll('input[name="' + nomePergunta + '"]:checked');
+                const resultado = document.getElementById(idResultado);
+                const valoresSelecionados = Array.from(selecionados).map(cb => cb.value);
+
+                 if (valoresSelecionados.length === 0) {
+                resultado.textContent = "⚠️ Selecione pelo menos uma opção!";
+                resultado.style.color = "orange";
+                return;
+                }
+                const acertouTudo = respostasCorretas.length === valoresSelecionados.length &&
+                        respostasCorretas.every(v => valoresSelecionados.includes(v));
+
+                 if (acertouTudo) {
+                     resultado.textContent = "✅ Correto! Ester Moretti, Boss e Guilherme são uns fofos mesmo!";
+                    resultado.style.color = "green";
+
+                } else {
+                     resultado.textContent = "❌ Errado! As respostas corretas eram: " + respostasCorretas.join(", ");
+                    resultado.style.color = "red";
+                }
+            }
+        </script>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>
